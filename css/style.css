@@ -84,7 +84,7 @@ a:hover{
 }
 
 .parallax {
-    background-image: url("../Imágenes/fondo-cielo_1122-2699.webp");
+    background-image: url("./Imágenes/fondo-cielo_1122-2699.webp");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
