@@ -127,31 +127,32 @@ input[type="text"], input[type="email"], textarea {
 
 .grid-main {
     display: grid;
-    grid-area: main;
+    grid-area: contenido;
 }
 
 .grid-header {
     display: grid;
     grid-area: menu;
 }
-.grid-copyright{
-    display: grid;
-    grid-area: copyright;
-}
+
 .grid-footer {
     display: grid;
-    grid-area: footer;
+    grid-template-columns: footer;
+}
+.grid-copyright{
+    display: grid;
+    grid-template-columns: copyright;
 }
 
 .grid-body {
     display: grid;
     grid-template-columns: (1, 1fr); 
-    grid-template-rows: 6rem ; 
+    grid-template-rows: 6rem; 
     grid-template-areas: 
     "menu"
-    "main"
+    "contenido"
     "footer"
-    "copyright"
+    "copyright "
     ;
 }
 
