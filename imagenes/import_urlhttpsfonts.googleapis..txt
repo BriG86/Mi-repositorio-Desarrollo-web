@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px; /* Ajustado para mejorar la legibilidad */
+}
+
+.main-content {
+    flex: 1 0 auto;
+    padding: 20px; /* Añadido para dar un poco de espacio alrededor del contenido */
+}
+
+header {
+    background-color: #D9BBA0;
+    padding: 10px 0; /* Añadido para dar un poco de espacio alrededor del encabezado */
+}
+
+.imagen {
+    width: 100%;
+    height: auto; /* Cambiado a auto para mantener la proporción de la imagen */
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #D9BBA0;
+    flex-shrink: 0;
+    padding: 10px 0; /* Añadido para dar un poco de espacio alrededor del pie de página */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-inline: 5%;
+    font-size: 1em;
+    padding: 0 10px; /* Añadido para dar un poco de espacio alrededor de la lista */
+}
+
+.titulo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2em;
+    font-family: "Sedan", serif;
+    padding: 20px;
+    padding-top: 200px;
+}
+
+.h1 {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 1%;
+    font-weight: bold; /* Añadido para dar más énfasis al título */
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #403D12;
+    transition: color 0.3s ease; /* Añadido para suavizar el cambio de color en el hover */
+}
+
+a:hover {
+    color: #333; /* Añadido para cambiar el color del enlace al pasar el ratón por encima */
+}
+
+.p {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6; /* Añadido para mejorar la legibilidad del texto */
+}
+
+.h3 {
+    text-align: center;
+    font-weight: bold; /* Añadido para dar más énfasis al subtítulo */
+}
+
+.parallax {
+    background-image: url("../Imágenes/fondo-cielo_1122-2699.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: solid 1px;
+    font-size: 21px;
+    padding: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    box-sizing: border-box;
+    padding: 10px; /* Añadido para dar un poco de espacio alrededor del texto en los campos de entrada */
+}
+
+.grid-main{
+    grid-area: contenido;
+}
+
+.grid-header {
+    grid-area: menu;
+}
+
+.grid-footer {
+    grid-template-columns: footer;
+}
+
+.grid-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: 6rem 110rem 15rem 8rem; 
+    grid-template-areas: 
+    "menu menu menu"
+    "menu menu menu"
+    "menu menu menu"
+    "menu menu menu"
+    ;
+}
+
+.btn-submit{
+    height: 0.5rem;
+    padding: 10px 20px; /* Añadido para dar un poco de espacio alrededor del texto en el botón */
+    background-color: #D9BBA0; /* Añadido para dar color al botón */
+    color: #fff; /* Añadido para cambiar el color del texto en el botón */
+    border-radius: 5px; /* Añadido para redondear las esquinas del botón */
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100%;
+        height: auto;
+    }
+    .titulo {
+        font-size: 1.5em;
+        height: auto;
+        padding: 10px;
+    }
+    .grid-container {
+        grid-template-rows:100px 1fr 1fr 1fr 60px;
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "header"
+        "nav"
+        "productos"
+        "publicidad"
+        "servicios"
+        "footer";
+    } 
+    .border {
+        background-color: lightblue; 
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .titulo {
+        position: relative;
+        top: 0;
+    }
+}
