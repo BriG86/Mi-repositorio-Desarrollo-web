@@ -6,7 +6,11 @@ body, html {
   display: flex;
   flex-direction: column;
 }
-
+hr{
+  height: 5px;
+  background: rgb(0,0,0);
+  background: linear-gradient(275deg, rgb(2, 0, 36) 68%, rgb(255, 255, 255) 100%);
+}
 .main-content {
   flex: 1 0 auto;
 }
@@ -116,7 +120,6 @@ a:hover {
 }
 
 .contacto {
-  display: grid;
   grid-template-columns: 1fr;
   border: solid 1px;
   font-size: 21px;
@@ -130,35 +133,31 @@ input[type=text], input[type=email], textarea {
 }
 
 .grid-main {
-  display: grid;
   grid-area: main;
+  flex-grow: 1;
 }
 
 .grid-section {
-  display: grid;
   grid-area: section;
 }
 
 .grid-header {
-  display: grid;
   grid-area: header;
 }
 
 .grid-footer {
-  display: grid;
-  grid-template-columns: footer;
+  grid-area: footer;
 }
 
 .grid-copyright {
-  display: grid;
-  grid-template-columns: copyright;
+  grid-area: copyright;
 }
 
 .grid-body {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 6rem 9.5rem 28rem 55rem 5rem;
-  grid-template-areas: "header" "main" "section" "footer" "copyright";
+  grid-template-rows: auto;
+  grid-template-areas: "header" "main" "section" "section2" "footer" "copyright";
 }
 
 .btn-submit {
@@ -169,8 +168,8 @@ input[type=text], input[type=email], textarea {
   .grid-body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 6rem 11.5rem 29rem 55rem 5rem;
-    grid-template-areas: "header" "main" "section" "footer" "copyright";
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "section" "section2" "footer" "copyright";
   }
   .parallax {
     background-image: url("../imagenes/fondo-cielo_1122-2699.webp");
@@ -199,8 +198,8 @@ input[type=text], input[type=email], textarea {
   .grid-body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 6rem 9.5rem 28rem 55rem 5rem;
-    grid-template-areas: "header" "main" "section" "footer" "copyright";
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "section" "section2" "footer" "copyright";
   }
   .parallax {
     background-image: url("../imagenes/fondo-cielo_1122-2699.webp");
@@ -269,6 +268,9 @@ section p {
 .img-footer {
   width: 100px;
   display: flex;
+}
+.section2{
+  grid-area: section2;
 }
 
 .section2 h1 {
