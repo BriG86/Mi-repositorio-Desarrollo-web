@@ -1,16 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap");
-body, html {
+@import "https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap";
+
+body {
   height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-hr{
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
   height: 5px;
-  background: rgb(0,0,0);
+  background: rgb(0, 0, 0);
   background: linear-gradient(275deg, rgb(2, 0, 36) 68%, rgb(255, 255, 255) 100%);
 }
+
 .main-content {
   flex: 1 0 auto;
 }
@@ -35,7 +47,6 @@ footer {
   flex-shrink: 0;
   text-align: center;
 }
-
 footer a {
   color: #ffffff;
   list-style: none;
@@ -54,11 +65,9 @@ footer a {
   margin-inline: 5%;
   font-size: 1.1em;
 }
-
 .lista-header a {
   color: #ffffff;
 }
-
 .lista-header img {
   width: 100px;
 }
@@ -82,7 +91,6 @@ a {
   color: #403D12;
   transition: background-color 0.5s;
 }
-
 a:hover {
   color: black;
 }
@@ -106,12 +114,10 @@ a:hover {
   padding-left: 10%;
   padding-right: 5%;
 }
-
 .parallax h2 {
   font-size: 30px;
   padding-left: 20%;
 }
-
 .parallax p {
   margin: 0px;
   font-weight: 500;
@@ -126,7 +132,19 @@ a:hover {
   padding: 5px;
 }
 
-input[type=text], input[type=email], textarea {
+input[type=text] {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+textarea {
   width: calc(100% - 20px);
   margin: 0 10px;
   box-sizing: border-box;
@@ -162,6 +180,86 @@ input[type=text], input[type=email], textarea {
 
 .btn-submit {
   height: 0.5rem;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#footer-copyright {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 100%, rgb(0, 212, 255) 100%);
+  flex-shrink: 0;
+}
+#footer-copyright p {
+  color: #ffffff;
+  display: flex;
+  justify-content: left;
+  padding-left: 1%;
+  justify-content: center;
+}
+
+.img-avion {
+  width: 600px;
+  float: right;
+  margin-bottom: 2%;
+}
+
+section p {
+  margin: 0px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 1%;
+  text-align: center;
+}
+
+.footer img {
+  width: 20px;
+}
+
+.lista-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding-left: 18%;
+  list-style: none;
+}
+
+.img-footer {
+  width: 100px;
+  display: flex;
+}
+
+.section2 {
+  grid-area: section2;
+}
+.section2 h1 {
+  text-align: center;
+}
+.section2 img {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#galeria h2 {
+  text-align: center;
+}
+#galeria img {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -211,86 +309,4 @@ input[type=text], input[type=email], textarea {
     padding-left: 10%;
     padding-right: 5%;
   }
-}
-.footer-nav {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#footer-copyright {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(2, 0, 36);
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(255, 255, 255) 100%, rgb(0, 212, 255) 100%);
-  flex-shrink: 0;
-}
-
-#footer-copyright p {
-  color: #ffffff;
-  display: flex;
-  justify-content: left;
-  padding-left: 1%;
-  justify-content: center;
-}
-
-.img-avion {
-  width: 600px;
-  float: right;
-  margin-bottom: 2%;
-}
-
-section p {
-  margin: 0px;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 24px;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-bottom: 1%;
-  text-align: center;
-}
-
-.footer img {
-  width: 20px;
-}
-
-.lista-footer {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  justify-content: space-evenly;
-  padding-left: 18%;
-  list-style: none;
-}
-
-.img-footer {
-  width: 100px;
-  display: flex;
-}
-.section2{
-  grid-area: section2;
-}
-
-.section2 h1 {
-  text-align: center;
-}
-
-.section2 img {
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-#galeria h2 {
-  text-align: center;
-}
-
-#galeria img {
-  width: 400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
