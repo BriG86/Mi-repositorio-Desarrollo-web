@@ -1,0 +1,27 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.grid-body {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto;
+		grid-template-areas: "header" "main" "section" "section2" "footer" "copyright";
+	}
+	.parallax {
+		height: 70vh;
+	}	
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.parallax {
+		height: 150vh;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.grid-body {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: auto;
+		grid-template-areas: "header" "main" "section" "section2" "footer" "copyright";
+	}
+	.parallax {
+		height: 70vh;
+	}
+}
