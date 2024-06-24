@@ -7,11 +7,17 @@
 	}
 	.parallax {
 		height: 70vh;
-	}	
+	}
+	.dropdown {
+		margin-bottom: 4.5%;
+	}
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	.parallax {
 		height: 150vh;
+	}
+	.dropdown {
+		margin-bottom: 4%;
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -23,5 +29,8 @@
 	}
 	.parallax {
 		height: 70vh;
+	}
+	.dropdown {
+		margin-bottom: 2.5%;
 	}
 }
